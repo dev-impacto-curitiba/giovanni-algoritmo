@@ -38,7 +38,6 @@ Endpoint	Função
 /v1/risk/by_bairro	Agrega e classifica o risco por bairro
 /v1/impact/by_bairro	Estima impacto e ROI com base em parâmetros configuráveis
 🚀 Execução Rápida
-git clone https://github.com/seuusuario/forecast.ia.git
 cd forecast.ia/backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt

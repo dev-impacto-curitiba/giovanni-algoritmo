@@ -1,0 +1,18 @@
+hazard_daily_weights:
+  p6: 0.25
+  a72: 0.25
+  sm: 0.15
+  etd: 0.10
+  p1: 0.10
+  pp: 0.05
+  rd: 0.10        # só se ribeirinho
+
+u_weights:
+  perm: 0.40
+  macro: 0.25
+  cob: 0.20
+  micro: 0.15
+
+hazard_levels:
+  green_max: 0.33
+  yellow_max: 0.66

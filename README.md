@@ -1,28 +1,25 @@
-🌎 Forecast.IA — Inteligência Artificial para Governança Climática Preventiva
+🌎 Forecast.IA — IA para Prevenção Climática e Ação Urbana Inteligente
 
-O Forecast.IA é uma plataforma de IA aplicada à gestão climática urbana, desenvolvida para prever riscos ambientais e apoiar decisões preventivas antes que desastres aconteçam.
+O Forecast.IA é uma plataforma de inteligência artificial voltada à gestão climática urbana, criada para ajudar cidades a prever, agir e reduzir impactos ambientais — antes que o desastre aconteça.
 
-A solução integra dados meteorológicos em tempo real (Open-Meteo) e indicadores locais para estimar índices de perigo climático (H_score), gerando alertas, recomendações e estimativas de impacto para gestores públicos.
+A solução transforma dados meteorológicos em tempo real em insights acionáveis, permitindo que prefeituras e órgãos públicos identifiquem onde o risco vai crescer, o que deve ser feito e qual será o impacto de cada decisão.
 
-🧠 Como Funciona
+Mais do que um painel climático, o Forecast.IA é um assistente de decisão urbana que conecta IA, dados ambientais e planejamento público em um único ecossistema.
 
-O sistema é estruturado em três níveis de recomendação, inspirados em metodologias de resiliência urbana (C40 Cities e FEMA Hazus/BCA):
+🧩 Três níveis de inteligência climática
+1️⃣ Diagnóstico (Prever)
 
-🔹 Nível 1 — Diagnóstico
+Detecta áreas e períodos críticos de risco climático — como alagamentos nas próximas 48h — com base em previsões da Open-Meteo e variáveis locais (chuva, umidade, solo, drenagem).
 
-Identifica onde e quando o risco vai aumentar.
+2️⃣ Ação (Responder)
 
-Exemplo: “Alta probabilidade de alagamento nos bairros críticos nas próximas 48h.”
+Sugere intervenções preventivas e estruturais, como limpeza de bueiros, abertura de canais, ou aumento da cobertura verde, priorizando onde agir primeiro.
 
-🔹 Nível 2 — Ação
+3️⃣ Impacto (Avaliar)
 
-Sugere medidas emergenciais e estruturais, como limpeza de bueiros ou ampliação da cobertura vegetal.
+Traduz os resultados em métricas de gestão pública: custo estimado, pessoas beneficiadas e retorno sobre investimento (ROI médio 4–7:1), inspirado nas metodologias FEMA Hazus e UNDRR.
 
-🔹 Nível 3 — Impacto
-
-Traduz os resultados em indicadores de gestão, como custo estimado, pessoas beneficiadas e ROI médio (4–7:1) — conforme referências FEMA/UNDRR.
-
-⚙️ Estrutura do Projeto
+⚙️ Arquitetura do Projeto
 forecast.ia/
 ├── backend/                 # API FastAPI (cálculo de H_score e impacto)
 │   ├── app_bairros_risk_api.py
@@ -32,23 +29,28 @@ forecast.ia/
 │   └── sidebar com explicações e indicadores
 └── data/                    # Dados meteorológicos e parâmetros locais
 
-🌐 Endpoints Principais
+🌐 Principais Endpoints
 Endpoint	Função
-/v1/hazard/openmeteo	Calcula o risco climático (H_score) com base em dados da Open-Meteo
+/v1/hazard/openmeteo	Calcula o índice climático H_score a partir de dados da Open-Meteo
 /v1/risk/by_bairro	Agrega e classifica o risco por bairro
-/v1/impact/by_bairro	Estima impacto e ROI com base em parâmetros configuráveis
+/v1/impact/by_bairro	Gera indicadores socioeconômicos e ROI estimado
 🚀 Execução Rápida
+git clone https://github.com/seuusuario/forecast.ia.git
 cd forecast.ia/backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app_bairros_risk_api:app --reload
 
-🌍 Acesse:
 
+Acesse:
 👉 http://127.0.0.1:8000/v1/hazard/openmeteo
 
 👉 http://127.0.0.1:8000/v1/impact/by_bairro?bairro=guajuviras
 
-💡 Objetivo
+💡 Por que Forecast.IA
 
-Transformar dados meteorológicos em decisões práticas e explicáveis, fortalecendo a governança climática preventiva e a resiliência urbana — ajudando o setor público a agir antes da crise, e não depois dela.
+🌧️ Previne antes da crise, com IA explicável e dados meteorológicos abertos.
+
+🏙️ Prioriza ações com base em impacto e eficiência urbana.
+
+📊 Traduz dados em decisões — conectando tecnologia, gestão pública e sustentabilidade.

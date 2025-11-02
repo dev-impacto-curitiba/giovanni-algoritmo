@@ -1,4 +1,5 @@
-# Giovanni Algoritmo — API de Risco por Bairros
+
+# Forecast.AI — API de Risco por Bairros
 
 ## Visão Geral
 Este projeto expõe uma API FastAPI que calcula risco de inundação por bairro na cidade de Canoas/RS combinando dois pilares:
